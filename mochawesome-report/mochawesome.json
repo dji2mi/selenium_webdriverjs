@@ -1,0 +1,141 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-08-19T13:18:20.256Z",
+    "end": "2019-08-19T13:18:36.047Z",
+    "duration": 15791,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "61d9dad9-0ed0-4d18-aa33-e670f41c682b",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "33cae185-d577-4ae6-ad53-d787e7114cdc",
+          "title": "login form",
+          "fullFile": "C:\\Users\\Anton_Zimin\\Desktop\\WORK\\backup\\Work\\study\\Test Automation Mentoring Program\\Selenium\\home_work\\test\\specs\\login_spec.js",
+          "file": "\\test\\specs\\login_spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "login form \"before all\" hook",
+              "timedOut": false,
+              "duration": 5152,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();",
+              "err": {},
+              "uuid": "28af0ac0-b3e9-4927-8460-c7623851ca73",
+              "parentUUID": "33cae185-d577-4ae6-ad53-d787e7114cdc",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook",
+              "fullTitle": "login form \"after all\" hook",
+              "timedOut": false,
+              "duration": 47,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver && driver.quit()",
+              "err": {},
+              "uuid": "94a6a80c-65f2-4f74-9f1b-a11d6d25e83f",
+              "parentUUID": "33cae185-d577-4ae6-ad53-d787e7114cdc",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should login with correct credentials",
+              "fullTitle": "login form should login with correct credentials",
+              "timedOut": false,
+              "duration": 10578,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://www.apc.com/shop/us/en/tools/ups_selector/');\nawait driver.findElement(webdriver.By.className('FlowSelector_flowSelectorLabel__1w35m')).click();\nawait driver.findElement(By.className('SeButton_btn__1f6LO SeButton_primary__17Qhr FlowSelector_btnFlowSelection__3UDnS')).click();\nawait driver.findElement(By.id('total_load')).sendKeys('600');\nawait driver.findElement(By.className('SeButton_btn__1f6LO SeButton_primary__17Qhr ')).click();\nlet title = await driver.getTitle();\nassert.equalTo(title, 'APC UPS Selector/Calculator - Find the Correct Battery Backup');",
+              "err": {
+                "message": "ReferenceError: webdriver is not defined",
+                "estack": "ReferenceError: webdriver is not defined\n    at Context.<anonymous> (test\\specs\\login_spec.js:14:34)\n    at process._tickCallback (internal/process/next_tick.js:68:7)",
+                "diff": null
+              },
+              "uuid": "f27fbf4e-5615-40c8-8d1a-5d0c20c71d27",
+              "parentUUID": "33cae185-d577-4ae6-ad53-d787e7114cdc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f27fbf4e-5615-40c8-8d1a-5d0c20c71d27"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10578,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 100000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 100000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": null,
+      "version": "4.0.1"
+    }
+  }
+}
